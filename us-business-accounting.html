@@ -102,9 +102,14 @@
                     <!-- Mobile Menu Button -->
                     <div class="mobile-menu-button">
                         <button id="mobile-menu-button">
-                            <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <!-- Simple hamburger menu with better styling -->
+                                <g stroke="#ffffff" stroke-width="2" stroke-linecap="round">
+                                  <line x1="4" y1="6" x2="20" y2="6"/>
+                                  <line x1="4" y1="12" x2="20" y2="12"/>
+                                  <line x1="4" y1="18" x2="20" y2="18"/>
+                                </g>
+                              </svg>
                         </button>
                     </div>
                 </div>
@@ -118,9 +123,10 @@
         <nav class="mobile-nav">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
+            <a href="AccountingandBookkeepingServices.html">Accounting & Bookkeeping Services</a>
             
             <button id="dropdown-btn">
-                Accounting & Bookkeeping Services
+                Services for Businesses
                 <svg id="arrow" width="30" height="30" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
                 </svg>
@@ -129,22 +135,40 @@
             </button>
             
             <div id="dropdown-menu" class="hidden">
-                <h5>Services for Businesses</h3>
+                
                 <a href="us-business-accounting.html">US Businesses Accounting Services</a>
                 <a href="uk-business-accounting.html">UK Businesses Accounting Services</a>
                 <a href="candian-business-accounting.html">Canadian Businesses Accounting Services</a>
                 <a href="ausandnz-bussiness-acconting.html">AUS and NZ Businesses Accounting Services</a>
                 <a href="irish-bussiness-acconting.html">Irish Businesses Accounting Services</a>
                 <a href="uae-bussiness-acconting.html">UAE Businesses Accounting Services</a>
-
-                <h5>Services for Accounting Firms</h3>
+            </div>
+            <button id="dropdown-btn1">
+                Services for Accounting Firms
+                <svg id="arrow1" class="arrow-icon" width="30" height="30" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+                
+                
+            </button>
+            <div id="dropdown-menu1" class="hidden">
+        
                 <a href="AccountingServicesforUSAccountingFirms.html">US Accounting Firms</a>
                 <a href="AccountingServicesforUKAccountingFirms.html">UK Accounting Firms</a>
                 <a href="AccountingServicesforCanadianAccountingFirms.html">Canadian Accounting Firms</a>
                 <a href="AccountingServicesforAUSAndNZAccountingFirm.html">AUS And NZ Accounting Firm</a>
                 <a href="AccountingServicesforIrishAccountingFirms.html">Irish Accounting Firms</a>
-
-                <h5>Value Add Services</h3>
+            </div>
+            <button id="dropdown-btn2">
+                Value Add Services
+                <svg id="arrow2" class="arrow-icon" width="30" height="30" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+                
+                
+            </button>
+            <div id="dropdown-menu2" class="hidden">
+             
                 <a href="IFRSConversion.html">IFRS Conversion</a>
                 <a href="FinancialAnalytics.html">Financial Analytics</a>
                 <a href="PayrollServices.html">Payroll Services</a>
@@ -253,12 +277,32 @@
                     </div> 
                     <div class="container1">
                         <div class="header1">Softwares We Use</div>
-                        <div class="logo-container1">
+                        <div class="logos-container">
                             <div class="logos1">
-                                <img src="images/main-slider/image-1.jpg" alt="Appfolio">
-                                <img src="images/main-slider/image-1.jpg" alt="Software 2">
-                                <img src="images/main-slider/image-1.jpg" alt="Software 3">
-                                <img src="images/main-slider/image-1.jpg" alt="Software 4">
+                                <!-- Group 1 -->
+                              <!-- Group 1 -->
+<div class="logo-group">
+    <img src="images/softawreweuse-a2x.webp" alt="Appfolio">
+    <img src="images/software-logo1.webp" alt="Software 2">
+</div>
+
+<!-- Group 2 -->
+<div class="logo-group">
+    <img src="images/software-logo14.webp" alt="Software 3">
+    <img src="images/software-logo2.webp" alt="Software 4">
+</div>
+
+<!-- Group 3 -->
+<div class="logo-group">
+    <img src="images/Wave_logo_RGB-300x109.webp" alt="Wave">
+    <img src="images/buildium-realpage-company-logo1.webp" alt="Buildium">
+</div>
+
+<!-- Group 4 -->
+<div class="logo-group">
+    <img src="images/freshbooks-logo-1.webp" alt="Freshbooks">
+    <img src="images/Quickbooks_intuit_logo.webp" alt="Quickbooks">
+</div>
                             </div>
                         </div>
                         <div class="footer1">Contact Us</div>

@@ -697,9 +697,24 @@ document.getElementById('close-menu').addEventListener('click', () => {
 });
 
 // Mobile dropdown functionality
+// Mobile dropdown functionality
 document.getElementById('dropdown-btn').addEventListener('click', () => {
 	const dropdownMenu = document.getElementById('dropdown-menu');
 	const arrow = document.getElementById('arrow');
 	dropdownMenu.classList.toggle('hidden');
 	arrow.classList.toggle('rotate-180');
+});
+
+document.getElementById('dropdown-btn1').addEventListener('click', () => {
+	const dropdownMenu1 = document.getElementById('dropdown-menu1');
+	const arrow1 = document.getElementById('arrow1');
+	dropdownMenu1.classList.toggle('hidden');
+	arrow1.classList.toggle('rotate-180');
+});
+
+document.getElementById('dropdown-btn2').addEventListener('click', () => {
+	const dropdownMenu2 = document.getElementById('dropdown-menu2');
+	const arrow2 = document.getElementById('arrow2');
+	dropdownMenu2.classList.toggle('hidden');
+	arrow2.classList.toggle('rotate-180');
 });
