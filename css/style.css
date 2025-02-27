@@ -2402,7 +2402,10 @@ font-family: 'Montserrat', sans-serif;
 */
 
 .contact-info {
-	margin-bottom: 170px;
+    margin-bottom: 170px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    background-color: rgba(8, 4, 57, 0.2); /* Optional: adds a slight white overlay */
 }
 
 .contact-info .text{
@@ -2426,14 +2429,19 @@ font-family: 'Montserrat', sans-serif;
 }
 
 .contact-item-one:hover{
-	box-shadow: 0px 8px 20px 10px #f5f9f5;
+	box-shadow: 0px 4px 10px 5px #f5f9f5;
 }
 
 .contact-item-one i:before{
 	font-size: 60px;
-	color: #57b957;
+	color: #182345;
 }
-
+.align{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
 .contact-item-one h6{
 	font-size: 20px;
 	color: #182345;
@@ -3917,3 +3925,15 @@ h5 a:hover {
 	color: black !important;
 }
 
+
+.contact-area {
+    border-radius: 20px;
+}
+
+.custom-input, .custom-select, .custom-textarea {
+    border-radius: 10px;
+}
+
+.custom-button {
+    border-radius: 50px; /* fully rounded button */
+}
