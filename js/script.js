@@ -697,24 +697,85 @@ document.getElementById('close-menu').addEventListener('click', () => {
 });
 
 // Mobile dropdown functionality
-// Mobile dropdown functionality
-document.getElementById('dropdown-btn').addEventListener('click', () => {
-	const dropdownMenu = document.getElementById('dropdown-menu');
-	const arrow = document.getElementById('arrow');
-	dropdownMenu.classList.toggle('hidden');
-	arrow.classList.toggle('rotate-180');
+// Mobile dropdown functionality// Define a function to close all dropdowns
+function closeAllDropdowns() {
+    // Get all dropdown menus and arrows
+    const allMenus = [
+        document.getElementById('dropdown-menu'),
+        document.getElementById('dropdown-menu1'),
+        document.getElementById('dropdown-menu2')
+    ];
+    
+    const allArrows = [
+        document.getElementById('arrow'),
+        document.getElementById('arrow1'),
+        document.getElementById('arrow2')
+    ];
+    
+    // Close all menus and reset arrows
+    allMenus.forEach(menu => {
+        if (!menu.classList.contains('hidden')) {
+            menu.classList.add('hidden');
+        }
+    });
+    
+    allArrows.forEach(arrow => {
+        if (arrow.classList.contains('rotate-180')) {
+            arrow.classList.remove('rotate-180');
+        }
+    });
+}
+
+// First dropdown
+document.getElementById('dropdown-btn').addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent event bubbling
+    const dropdownMenu = document.getElementById('dropdown-menu');
+    const arrow = document.getElementById('arrow');
+    
+    // Check if this dropdown is already open
+    const isOpen = !dropdownMenu.classList.contains('hidden');
+    
+    // Close all dropdowns first
+    closeAllDropdowns();
+    
+    // If this dropdown wasn't open, open it (otherwise it stays closed)
+    if (!isOpen) {
+        dropdownMenu.classList.remove('hidden');
+        arrow.classList.add('rotate-180');
+    }
 });
 
-document.getElementById('dropdown-btn1').addEventListener('click', () => {
-	const dropdownMenu1 = document.getElementById('dropdown-menu1');
-	const arrow1 = document.getElementById('arrow1');
-	dropdownMenu1.classList.toggle('hidden');
-	arrow1.classList.toggle('rotate-180');
+// Second dropdown
+document.getElementById('dropdown-btn1').addEventListener('click', (e) => {
+    e.stopPropagation();
+    const dropdownMenu1 = document.getElementById('dropdown-menu1');
+    const arrow1 = document.getElementById('arrow1');
+    
+    const isOpen = !dropdownMenu1.classList.contains('hidden');
+    closeAllDropdowns();
+    
+    if (!isOpen) {
+        dropdownMenu1.classList.remove('hidden');
+        arrow1.classList.add('rotate-180');
+    }
 });
 
-document.getElementById('dropdown-btn2').addEventListener('click', () => {
-	const dropdownMenu2 = document.getElementById('dropdown-menu2');
-	const arrow2 = document.getElementById('arrow2');
-	dropdownMenu2.classList.toggle('hidden');
-	arrow2.classList.toggle('rotate-180');
+// Third dropdown
+document.getElementById('dropdown-btn2').addEventListener('click', (e) => {
+    e.stopPropagation();
+    const dropdownMenu2 = document.getElementById('dropdown-menu2');
+    const arrow2 = document.getElementById('arrow2');
+    
+    const isOpen = !dropdownMenu2.classList.contains('hidden');
+    closeAllDropdowns();
+    
+    if (!isOpen) {
+        dropdownMenu2.classList.remove('hidden');
+        arrow2.classList.add('rotate-180');
+    }
+});
+
+// Close dropdowns when clicking elsewhere on the page
+document.addEventListener('click', () => {
+    closeAllDropdowns();
 });
